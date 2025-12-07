@@ -31,7 +31,7 @@ class PrintingDepartment {
     }
 
     private void setData() throws IOException {
-        Scanner scanner = new Scanner(Path.of("src/main/java/day4/input.txt"));
+        Scanner scanner = new Scanner(Path.of(Objects.requireNonNull(getClass().getResource("input.txt")).getPath()));
         int row_index = 0;
         int column_index = 0;
         while (scanner.hasNext()) {

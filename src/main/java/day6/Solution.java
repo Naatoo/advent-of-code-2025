@@ -17,7 +17,7 @@ public class Solution {
 
 
 class ThrashCompactor {
-    private final Path filePath = Path.of("src/main/java/day6/input.txt");
+    private final Path filePath = Path.of(Objects.requireNonNull(getClass().getResource("input.txt")).getPath());
     private final static int dataLines = 4;
     private List<String> signs;
     private ArrayList<Long> results;

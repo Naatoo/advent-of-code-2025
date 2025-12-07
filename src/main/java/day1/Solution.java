@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Solution {
@@ -35,7 +36,7 @@ class SecretEntrance {
     }
 
     private void setData() throws IOException {
-        Scanner scanner = new Scanner(Path.of("src/main/java/day1/input.txt"));
+        Scanner scanner = new Scanner(Path.of(Objects.requireNonNull(getClass().getResource("input.txt")).getPath()));
         while (scanner.hasNext()) {
             this.data.add(scanner.nextLine());
         }

@@ -4,6 +4,7 @@ import java.io.IOException;
 import java.nio.file.Path;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Objects;
 import java.util.Scanner;
 
 public class Solution {
@@ -41,7 +42,7 @@ class GiftShop {
     }
 
     private void setData() throws IOException {
-        Scanner scanner = new Scanner(Path.of("src/main/java/day2/input.txt"));
+        Scanner scanner = new Scanner(Path.of(Objects.requireNonNull(getClass().getResource("input.txt")).getPath()));
         String rawData = scanner.nextLine();
         for (String range : rawData.split(",")) {
             String[] rangePart = range.split("-");
